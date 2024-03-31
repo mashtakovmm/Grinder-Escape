@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [Header("Managers")]
     [SerializeField] GameManager gameManager;
 
+    [SerializeField] GameObject blood;
+
     Dictionary<int, Vector2> beltPositions = new Dictionary<int, Vector2>();
     Rigidbody2D rb;
     Vector2 dir;
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
     float diffScale;
     bool canMove = true;
     bool canJump = true;
+    bool isDead = false;
+    public bool IsDead => isDead;
 
     private void Awake()
     {
@@ -169,5 +173,8 @@ public class PlayerController : MonoBehaviour
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = false;
         canMove = false;
+        isDead = true;
+        GameObject bloodInstance = Instantiate(blood, transform.position, Quaternion.identity);
+        Destroy(bloodInstance, 1f);
     }
 }

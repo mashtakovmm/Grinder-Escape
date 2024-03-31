@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    [SerializeField] GameObject blood;
     GameManager gameManager;
     float speed = 1f;
     float diffScale;
@@ -31,6 +33,11 @@ public class Obstacle : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Enemy")
+        {
             Destroy(gameObject);
+        }
+        GameObject bloodInstance = Instantiate(blood, transform.position, Quaternion.identity);
+        Destroy(bloodInstance, 1f);
+
     }
 }

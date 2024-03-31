@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Particales
+    uniqueID: 1083779043
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 2601915493
+    locked: 0

@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        int i = Random.Range(0, beltObjects.Length - 1);
+        int i = Random.Range(0, beltObjects.Length);
         Vector2 spawnPos = new Vector2(beltObjects[i].transform.position.x, transform.position.y) ;
         Instantiate(prefabs[0], spawnPos, Quaternion.identity, transform);
         yield return new WaitForSeconds(Random.Range(minTime,maxTime));

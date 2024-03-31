@@ -4,8 +4,8 @@ Theme:  Butchering mania​​
 
 ## Controls: 
 
--WASD - Move
--Space - Jump
+- WASD - Move
+- Space - Jump
 
 ## Credits:
 

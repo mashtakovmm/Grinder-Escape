@@ -1,5 +1,5 @@
 ## Why
-Game was mde for [Trijam #263​](https://itch.io/jam/trijam-263) in 2h 50m.
+Game was made for [Trijam #263​](https://itch.io/jam/trijam-263) in 2h 50m.
 Theme:  Butchering mania​​
 
 ## Controls: 
